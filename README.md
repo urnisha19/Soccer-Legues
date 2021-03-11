@@ -1,7 +1,7 @@
 Project: Soccer Legues
 A site about the List of Soccer leagues with their details.
 
-Netlify Live Site:
+Netlify Live Site:https://scoccer-leagues.netlify.app/
 
 Things used: 
 1.Api from https://www.thesportsdb.com/api.php to fetch needed data
