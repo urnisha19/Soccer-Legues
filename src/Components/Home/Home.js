@@ -11,7 +11,7 @@ const Home = () => {
             .then(response => response.json())
             .then(data => {
                 console.log(data.leagues);
-                setLeagues(data.leagues.slice(0, 23));
+                setLeagues(data.leagues.slice(0, 21));
             })
     }, [])
 

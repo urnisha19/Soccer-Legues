@@ -19,11 +19,20 @@ const LeagueDetails = () => {
             })
     }, [leagueId]);
 
-    const { strLogo, strLeague, dateFirstEvent, strCountry, strSport, strGender, strDescriptionEN, strDescriptionFR, strTwitter, strFacebook, strYoutube } = league;
+    const {strBanner, strLogo, strLeague, dateFirstEvent, strCountry, strSport, strGender, strDescriptionEN, strDescriptionFR, strTwitter, strFacebook, strYoutube } = league;
+
+    const bannerStyle = { 
+        backgroundImage:`linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${strBanner})`,
+        width:'100%', 
+        height: '400px',
+        backgroundAttachment:' fixed',
+        backgroundPosition: "center",
+        backgroundRepeat:'no-repeat'
+    };
 
     return (
         <div className="league-details-page">
-            <div className="top-banner" >
+            <div className="bg-image text-center" style={bannerStyle}>
                 <img src={strLogo} alt="" />
             </div>
 
@@ -48,9 +57,9 @@ const LeagueDetails = () => {
                         <div className="col-md-6">
                             {
                                 strGender === 'Male' ?
-                                    <img src="https://i.ibb.co/Hhwvgs7/male.jpg" alt="male" className="w-100 rounded pt-3"></img>
+                                    <img src="https://i.ibb.co/VTzGhqj/male.jpg" alt="male" className="w-100 rounded p-3" ></img>
                                     :
-                                    <img src="https://i.ibb.co/yFM7sFs/female.jpg" alt="female" className="w-100 rounded pt-3"></img>
+                                    <img src="https://i.ibb.co/rykV7jV/female.jpg" alt="female" className="w-100 rounded p-3"></img>
                             }
                         </div>
                     </div>
@@ -63,9 +72,9 @@ const LeagueDetails = () => {
                 </div>
             </div>
             <div className="social-icons-style">
-                <a href={strTwitter}><FontAwesomeIcon icon={faTwitter} /></a>
-                <a href={strFacebook}> <FontAwesomeIcon icon={faFacebook} /></a>
-                <a href={strYoutube}><FontAwesomeIcon icon={faYoutube} /></a>
+                <a href={`https://${strTwitter}`} Target="_blank"><FontAwesomeIcon icon={faTwitter} /></a>
+                <a href={`https://${strFacebook}`} Target="_blank"> <FontAwesomeIcon icon={faFacebook} /></a>
+                <a href={`https://${strYoutube}`} Target="_blank"><FontAwesomeIcon icon={faYoutube} /></a>
             </div>
         </div>
     );
