@@ -15,11 +15,11 @@ const Home = () => {
     return (
         <div>
             <TopBanner />
-            <div className="all-leagues container">
+            <main className="all-leagues container">
                 {
                     leagues.map(league => <Leagues key={league.idLeague} league={league}></Leagues>)
                 }
-            </div>
+            </main>
         </div>
     );
 };
