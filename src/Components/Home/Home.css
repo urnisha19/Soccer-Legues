@@ -1,0 +1,11 @@
+.all-leagues{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 5em;
+    padding:2em;
+}
+
+
+
+
+
