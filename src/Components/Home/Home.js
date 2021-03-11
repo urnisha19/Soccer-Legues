@@ -9,11 +9,8 @@ const Home = () => {
         const allLeaguesUrl = "https://www.thesportsdb.com/api/v1/json/1/all_leagues.php";
         fetch(allLeaguesUrl)
             .then(response => response.json())
-            .then(data => {
-                console.log(data.leagues);
-                setLeagues(data.leagues.slice(0, 21));
-            })
-    }, [])
+            .then(data => setLeagues(data.leagues.slice(0, 21)))
+    }, []);
 
     return (
         <div>

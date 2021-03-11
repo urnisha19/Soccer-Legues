@@ -9,7 +9,6 @@ import Home from './Components/Home/Home';
 import LeagueDetails from './Components/LeagueDetails/LeagueDetails';
 import NotFound from './Components/NotFound/NotFound';
 
-
 function App() {
   return (
     <Router>
